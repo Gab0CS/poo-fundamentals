@@ -21,6 +21,11 @@ public class SpaceStone extends Stone {
         
     }
 
+    public SpaceStone() {
+        //TODO Auto-generated constructor stub
+        super(COLOR, NAME, LOCATION, ENERGY_LEVEL);
+    }
+
     @Override
     public void usePower() {
         System.out.println("Manipulate space" + super.toString());
