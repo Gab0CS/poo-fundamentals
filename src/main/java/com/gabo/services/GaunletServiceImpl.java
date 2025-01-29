@@ -1,9 +1,16 @@
 package com.gabo.services;
 
-public class GaunletServiceImpl implements GaunletService {
-    @Override
+import com.gabo.models.RealityStone;
+import com.gabo.models.Stone;
+import lombok.extern.java.Log;
 
-    public void useGaunlet(){
-        
+@Log
+public class GaunletServiceImpl implements GaunletService {
+
+    Stone reality = new RealityStone();
+
+    @Override
+    public void useGaunlet(String stoneName){
+        log.info("Use stone " + reality);
     }
 }

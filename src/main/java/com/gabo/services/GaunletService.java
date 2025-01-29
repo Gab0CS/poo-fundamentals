@@ -2,6 +2,6 @@ package com.gabo.services;
 
 public interface GaunletService {
 
-  void useGaunlet();
+  void useGaunlet(String stoneName);
 
 } 

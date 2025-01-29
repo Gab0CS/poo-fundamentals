@@ -12,11 +12,11 @@ import lombok.ToString;
 
 public abstract class Stone {
 
-    String color;
-    String name;
-    String location;
-    Integer energyLevel;
-    Integer numberOfSizes;
+    protected String color;
+    protected String name;
+    protected String location;
+    protected Integer energyLevel;
+    protected Integer numberOfSizes;
 
     private static final int NUMBER_SIDES = 6;
      
