@@ -2,12 +2,14 @@ package com.gabo.services;
 
 import com.gabo.models.RealityStone;
 import com.gabo.models.Stone;
+import com.gabo.singletons.RealityStoneSingleton;
+
 import lombok.extern.java.Log;
 
 @Log
 public class GaunletServiceImpl implements GaunletService {
 
-    Stone reality = new RealityStone();
+    private final Stone reality = RealityStoneSingleton.getInstance();
 
     @Override
     public void useGaunlet(String stoneName){
