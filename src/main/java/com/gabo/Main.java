@@ -2,6 +2,7 @@ package com.gabo;
 
 import java.util.Map;
 
+import com.gabo.configs.StoneContext;
 import com.gabo.factories.MindStoneFactory;
 import com.gabo.factories.PowerStoneFactory;
 import com.gabo.factories.RealityStoneFactory;
@@ -24,7 +25,12 @@ public class Main {
     public static void main(String[] args) {
         
 
-        
+        final var gaunletService = StoneContext.setContext(
+        pre->System.out.println("Do something"),
+        post->System.out.println("Do something 2"));
+
+        gaunletService.useFullPower();
+        StoneContext.destroyContext(gaunletService);
 
     }
 }

@@ -19,11 +19,14 @@ import com.gabo.models.TimeStone;
 import com.gabo.services.GaunletService;
 import com.gabo.services.GaunletServiceImpl;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import lombok.extern.java.Log;
 
 @Log
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class StoneContext {
-    public GaunletService setContext(
+    public static GaunletService setContext(
         Consumer<Void> preConstruct,
         Consumer<Void> postConstruct
     ){
@@ -72,7 +75,7 @@ public class StoneContext {
         return gaunletService;
     }
 
-    public void destroyContext(GaunletService gaunletService){
+    public static void destroyContext(GaunletService gaunletService){
         log.info("Cleaning Context");
         if(gaunletService instanceof GaunletServiceImpl){
             ((GaunletServiceImpl) gaunletService).getMind().clear();
