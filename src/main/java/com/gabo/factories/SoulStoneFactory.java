@@ -5,7 +5,7 @@ import com.gabo.models.Stone;
 import com.gabo.prototypes.Prototypes;
 import com.gabo.singletons.SoulStoneSingleton;
 
-public class SoulFactory extends ConfigurableStoneFactory {
+public class SoulStoneFactory extends ConfigurableStoneFactory {
     
     @Override
     public Stone createStone(){

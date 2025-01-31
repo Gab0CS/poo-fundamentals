@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import lombok.ToString;
 import lombok.extern.java.Log;
 
-@ToString
+@ToString(callSuper = true)
 @Log
 public class SoulStone extends Stone{
 
