@@ -71,4 +71,18 @@ public class StoneContext {
 
         return gaunletService;
     }
+
+    public void destroyContext(GaunletService gaunletService){
+        log.info("Cleaning Context");
+        if(gaunletService instanceof GaunletServiceImpl){
+            ((GaunletServiceImpl) gaunletService).getMind().clear();
+            ((GaunletServiceImpl) gaunletService).getPower().clear();
+            ((GaunletServiceImpl) gaunletService).getReality().clear();
+            ((GaunletServiceImpl) gaunletService).getSoul().clear();
+            ((GaunletServiceImpl) gaunletService).getSpace().clear();
+            ((GaunletServiceImpl) gaunletService).getTime().clear();
+        }
+        log.info("Cleaning properties");
+        System.clearProperty("scope");   
+    }
 }

@@ -33,5 +33,9 @@ public abstract class Stone implements Serializable {
         this.numberOfSizes = NUMBER_SIDES;
     }
 
-    public abstract void usePower();   
+    public abstract void usePower();  
+    
+    public void clear() {
+        System.out.println("Cleaning stone");
+    }
 }

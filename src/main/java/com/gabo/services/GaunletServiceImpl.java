@@ -14,6 +14,7 @@ import com.gabo.models.TimeStone;
 import com.gabo.singletons.RealityStoneSingleton;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.extern.java.Log;
@@ -21,6 +22,7 @@ import lombok.extern.java.Log;
 @Log
 @AllArgsConstructor  
 @NoArgsConstructor
+@Getter
 public class GaunletServiceImpl implements GaunletService {
 
     // private final Stone mind;
