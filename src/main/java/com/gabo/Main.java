@@ -14,19 +14,13 @@ import com.gabo.singletons.RealityStoneSingleton;
 
 public class Main {
     public static void main(String[] args) {
-        System.setProperty("scope", "prototype");
-        final var TimeStoneFactory = new TimeStoneFactory();
-        var timeStone = TimeStoneFactory.createStone();
+        System.setProperty("scope", "singleton");
+        
+        final var gaunletService = new GaunletServiceImpl();
+        var realityFactory = new RealityStoneFactory();
 
-        final var powerStoneFactory = new PowerStoneFactory();
-        var powerStone = powerStoneFactory.createStone();
-
-        final var realityStoneFactory = new RealityStoneFactory();
-        var realityStone = realityStoneFactory.createStone();
-
-        System.out.println(powerStone);
-        System.out.println(timeStone);
-        System.out.println(realityStone);
+        gaunletService.setReality(realityFactory.createStone());
+        gaunletService.useGaunlet("reality");
     }
 }
   
